@@ -143,7 +143,7 @@ function Footer() {
           WarpFlow.net
         </div>
         <div className="m-10 text-6xl text-Black bg-gray-200 order-last">
-          人員募集中！
+          人員募集中!!
         </div>
       </div>
       <div className="text-center p-4 bg-gray-200 w-100vw">
