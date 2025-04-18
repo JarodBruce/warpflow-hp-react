@@ -37,9 +37,10 @@ function Navigation() {
     setOpenMenu(!openMenu);
   };
   return (
-    <div className="background-color flex items-center h-20">
-      <div
-        className="text-[min(6vw,60px)] font-bold m-5 text-left select-none w-auto"
+    <div className="background-color flex justify-between items-center h-20">
+      <a
+        href="https://warpflow.net"
+        className="text-[min(6vw,60px)] font-bold m-5 text-left w-auto order-first"
         style={{
           fontFamily: '"Jaro", sans-serif',
           fontOpticalSizing: "auto",
@@ -48,8 +49,8 @@ function Navigation() {
         }}
       >
         WarpFlow.net
-      </div>
-      <div className="flex items-center justify-end w-full absolute">
+      </a>
+      <div className="flex items-center justify-end w-full order-last">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -137,16 +138,16 @@ function Cardgrid() {
 function Footer() {
   return (
     <div>
-      <div className="flex flex-col items-center justify-center h-20">
-        <div className="left-0 m-10 text-2xl text-gray-600 absolute">
+      <div className="flex items-center h-20 w-full justify-between">
+        <div className="m-10 text-2xl text-gray-600 order-first">
           WarpFlow.net
         </div>
-        <div className="right-0 m-10 text-6xl text-Black absolute bg-gray-200">
+        <div className="m-10 text-6xl text-Black bg-gray-200 order-last">
           人員募集中！
         </div>
       </div>
       <div className="text-center p-4 bg-gray-200 w-100vw">
-        <p className="text-gray-600 ">© 2023 Your Company</p>
+        <p className="text-gray-600 ">© 2025 Your Company</p>
       </div>
     </div>
   );
