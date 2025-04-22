@@ -4,7 +4,7 @@ import "./App.css";
 export default function App() {
   return (
     <>
-      <Navigation />
+      <Header />
       <div className="m-10">
         <div className="text-Black text-[min(6vw,60px)]">
           世界最速のWebサービスを提供する!
@@ -31,13 +31,13 @@ export default function App() {
   );
 }
 
-function Navigation() {
+function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const handleMenuOpen = () => {
     setOpenMenu(!openMenu);
   };
   return (
-    <div className="background-color flex justify-between items-center h-20">
+    <div className="background-color flex justify-between items-center h-20 bg-gray-200 w-full shadow-xl">
       <a
         href="https://warpflow.net"
         className="text-[min(6vw,60px)] font-bold m-5 text-left w-auto order-first"
@@ -89,22 +89,22 @@ function Navigation() {
         <nav
           className={
             openMenu
-              ? "text-left fixed right-0 top-0 w-full h-screen flex flex-col justify-start pt-8 px-3 transition-transform duration-300 transform translate-x-0 bg-opacity-50 backdrop-blur-sm"
-              : "text-left fixed right-0 top-0 w-full h-screen flex flex-col justify-start pt-8 px-3 transition-transform duration-300 transform translate-x-full bg-opacity-50 backdrop-blur-sm"
+              ? "text-left fixed right-0 w-full h-screen flex flex-col justify-start pt-8 px-3 transition-transform duration-300 transform translate-x-0 bg-opacity-50 backdrop-blur-sm top-20"
+              : "text-left fixed right-0 w-full h-screen flex flex-col justify-start pt-8 px-3 transition-transform duration-300 transform translate-x-full bg-opacity-50 backdrop-blur-sm top-20"
           }
         >
-          <NavigationMenuItem />
+          <HeaderMenuItem />
         </nav>
       </div>
     </div>
   );
 }
 
-function NavigationMenuItem() {
+function HeaderMenuItem() {
   return (
     <div className="mt-10 m-5">
       <li className="text-2xl font-bold text-gray-800">
-        <a href="#">aaaa</a>
+        <a href="#">About</a>
       </li>
     </div>
   );
@@ -114,19 +114,19 @@ function Cardgrid() {
   return (
     <div className="m-10">
       <div className="grid grid-cols-3 gap-4">
-        <div className="bg-gray-200 p-4 rounded-lg shadow-md hover:outline-2 outline-blue-500/50 transition duration-300">
+        <div className="bg-gray-200 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">sURL</h2>
           <p className="text-gray-600">This is the content of card 1.</p>
         </div>
-        <div className="bg-gray-200 p-4 rounded-lg shadow-md hover:outline-2 outline-blue-500/50 transition duration-300">
+        <div className="bg-gray-200 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">Card 2</h2>
           <p className="text-gray-600">This is the content of card 2.</p>
         </div>
-        <div className="bg-gray-200 p-4 rounded-lg shadow-md hover:outline-2 outline-blue-500/50 transition duration-300">
+        <div className="bg-gray-200 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">Card 3</h2>
           <p className="text-gray-600">This is the content of card 3.</p>
         </div>
-        <div className="bg-gray-200 p-4 rounded-lg shadow-md hover:outline-2 outline-blue-500/50 transition duration-300">
+        <div className="bg-gray-200 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">Card 4</h2>
           <p className="text-gray-600">This is the content of card 4.</p>
         </div>
@@ -142,7 +142,7 @@ function Footer() {
         <div className="m-10 text-2xl text-gray-600 order-first">
           WarpFlow.net
         </div>
-        <div className="m-10 text-6xl text-Black bg-gray-200 order-last">
+        <div className="m-10 text-6xl text-Black bg-gray-200 order-last w-10vw">
           人員募集中!!
         </div>
       </div>
